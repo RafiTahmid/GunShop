@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SingleGun from "../SingleGun/SingleGun";
 
-const AllGuns = () => {
+const AllGuns = ({ countIncrease }) => {
   const [guns, setGuns] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const AllGuns = () => {
 
       <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
         {guns.map((gun) => (
-          <SingleGun gun={gun}></SingleGun>
+          <SingleGun gun={gun} countIncrease={countIncrease}></SingleGun>
         ))}
       </div>
     </>

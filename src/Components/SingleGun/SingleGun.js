@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingleGun = ({ gun }) => {
+const SingleGun = ({ gun, countIncrease }) => {
   const { action, bullet, capacity, category, id, img, name, price } = gun;
   return (
     <div>
@@ -16,11 +16,13 @@ const SingleGun = ({ gun }) => {
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions flex-col">
             <div className="flex-row">
-              <div className="badge badge-outline">{action}}</div>
+              <div className="badge badge-outline">{action}</div>
               <div className="badge badge-outline mx-3">{category}</div>
             </div>
             <div className="mt-3">
-              <button className="btn btn-sm">Add To Cart</button>
+              <button onClick={() => countIncrease()} className="btn btn-sm">
+                Add To Cart
+              </button>
               <button className="btn btn-sm mx-3">Details</button>
             </div>
           </div>
