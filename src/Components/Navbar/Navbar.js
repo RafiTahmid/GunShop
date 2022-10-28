@@ -5,7 +5,7 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100 shadow-lg lg:px-20">
         <div className="flex-1">
-          <a href="/" className="btn btn-ghost normal-case text-xl">
+          <a href="/" className="btn btn-ghost normal-case text-3xl font-bold">
             GunShop
           </a>
         </div>
