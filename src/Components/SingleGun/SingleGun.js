@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "../Modal/Modal";
 
 const SingleGun = ({ gun, countIncrease }) => {
   const { action, bullet, capacity, category, id, img, name, price } = gun;
@@ -23,11 +24,17 @@ const SingleGun = ({ gun, countIncrease }) => {
               <button onClick={() => countIncrease()} className="btn btn-sm">
                 Add To Cart
               </button>
-              <button className="btn btn-sm mx-3">Details</button>
+              <label
+                htmlFor="my-modal-3"
+                className="btn modal-button btn-sm btn-success ml-3"
+              >
+                open modal
+              </label>
             </div>
           </div>
         </div>
       </div>
+      <Modal></Modal>
     </div>
   );
 };
